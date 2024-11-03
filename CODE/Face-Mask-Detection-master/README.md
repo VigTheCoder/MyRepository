@@ -37,7 +37,7 @@ You can install all dependencies using:
 pip install tensorflow keras opencv-python imutils numpy matplotlib
 
 Directory Structure:
-Face-Mask-Detection/
+Face-Mask-Detection-master/
 ├── dataset/
 │   ├── with_mask/
 │   └── without_mask/
