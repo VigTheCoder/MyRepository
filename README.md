@@ -1,4 +1,4 @@
-Real Time Covid-19 Face Mask Detection
+## Real Time Covid-19 Face Mask Detection
 This project is a face mask detection system that can detect if a person is wearing a face mask or not in real-time video streams or images. It uses a deep learning model trained with Keras and TensorFlow, along with OpenCV for face detection, to determine whether each detected face has a mask or not.
 
 Table of Contents:
