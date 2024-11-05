@@ -1,39 +1,43 @@
 ## Real Time Covid-19 Face Mask Detection
 This project is a face mask detection system that can detect if a person is wearing a face mask or not in real-time video streams or images. It uses a deep learning model trained with Keras and TensorFlow, along with OpenCV for face detection, to determine whether each detected face has a mask or not.
 
-Table of Contents:
-. Overview
-. Features
-. Setup and Requirements
-. Dataset
-. Training the Model
-. Running the Detection
-. Results
-. References
+## Table of Contents:
+- [Overview](#overview)
+- [Features](#features)
+- [Setup and Requirements](#setup-and-requirements)
+- [Dataset](#dataset)
+- [Training the Model](#training-the-model)
+- [Running the Detection](#running-the-detection)
+- [Results](#results)
+- [References](#references)
 
-Overview:
+## Overview
 Face Mask Detection is a two-part application:
 
-Model Training: Trains a custom model to classify faces with and without masks.
-Real-time Mask Detection: Uses the trained model to detect face masks on people in real-time from a webcam feed.
+1. **Model Training**: Trains a custom model to classify faces with and without masks.
+2. **Real-time Mask Detection**: Uses the trained model to detect face masks on people in real-time from a webcam feed.
+
 The goal is to create a reliable face mask detector to help ensure public safety in areas requiring mask compliance.
 
-Features:
-Real-time Detection: Detects face masks in a live video feed.
-High Accuracy: Trained on a custom dataset to ensure accuracy in detection.
-MobileNetV2 Backbone: Uses the lightweight MobileNetV2 model for efficient performance.
-Data Augmentation: Enhances the model's robustness by augmenting training images with rotations, shifts, and more.
+## Features
+- **Real-time Detection**: Detects face masks in a live video feed.
+- **High Accuracy**: Trained on a custom dataset to ensure accuracy in detection.
+- **MobileNetV2 Backbone**: Uses the lightweight MobileNetV2 model for efficient performance.
+- **Data Augmentation**: Enhances the model's robustness by augmenting training images with rotations, shifts, and more.
 
-Setup and Requirements:
-Prerequisites
+## Setup and Requirements
+
+### Prerequisites
 To get started, you’ll need to have the following installed:
-Python 3.7+
-TensorFlow
-Keras
-OpenCV
-imutils
+- Python 3.7+
+- TensorFlow
+- Keras
+- OpenCV
+- imutils
 
 You can install all dependencies using:
+
+```bash
 pip install tensorflow keras opencv-python imutils numpy matplotlib
 
 Directory Structure:
