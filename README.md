@@ -35,22 +35,23 @@ To get started, you’ll need to have the following installed:
 - OpenCV
 - imutils
 
-You can install all dependencies using:
+To install all dependencies, run `pip install tensorflow keras opencv-python imutils numpy matplotlib` in your terminal.
 
-```bash
-pip install tensorflow keras opencv-python imutils numpy matplotlib
 
 ## Directory Structure:
-Face-Mask-Detection-master/
-├── dataset/
-│   ├── with_mask/
-│   └── without_mask/
-├── face_detector/
-│   ├── deploy.prototxt
-│   └── res10_300x300_ssd_iter_140000.caffemodel
-├── detect_mask_video.py
-├── train_mask_detector.py
-└── mask_detector.model
+
+```mermaid
+graph TD;
+    A[Face-Mask-Detection-master] --> B[dataset];
+    B --> C[with_mask];
+    B --> D[without_mask];
+    A --> E[face_detector];
+    E --> F[deploy.prototxt];
+    E --> G[res10_300x300_ssd_iter_140000.caffemodel];
+    A --> H[detect_mask_video.py];
+    A --> I[train_mask_detector.py];
+    A --> J[mask_detector.model];
+
 
  ## Dataset:
 The dataset should have two categories in separate folders:
@@ -60,8 +61,7 @@ without_mask: Images of people without masks.
 The dataset used for training should be placed in the dataset/ directory.
 
 Training the Model:
-To train the face mask detection model, run the train_mask_detector.py script:
-python train_mask_detector.py
+To train the face mask detection model, execute the command `python train_mask_detector.py`. 
 
 ## This script will:
 Load the dataset.
