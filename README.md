@@ -70,7 +70,7 @@ The dataset used for training should be placed in the dataset/ directory.
 ## Training the Model:
 To train the face mask detection model, execute the command `python train_mask_detector.py`. 
 
-This script will:
+This script will
 Load the dataset.
 Preprocess and augment the data.
 Train the MobileNetV2-based model.
@@ -81,27 +81,27 @@ EPOCHS: Number of training epochs.
 BS: Batch size.
 Once trained, the model will be saved as mask_detector.model for later use.
 
-## Running the Detection:
+## Running the Detection
 To start the real-time face mask detection, run the detect_mask_video.py script:
 python detect_mask_video.py
 
-## This script will:
+This script will
 Load the trained model (mask_detector.model).
 Initialize the video stream from the webcam.
 Detect faces using OpenCV’s faceNet.
 Predict if a face is wearing a mask or not using maskNet.
 Press q to exit the real-time video stream.
 
-## Results:
+## Results
 The script outputs a real-time video feed where each detected face is surrounded by a bounding box and labeled with:
 Mask: Green bounding box.
 No Mask: Red bounding box.
 It also shows the confidence level of each prediction.
 
-Model Performance:
+Model Performance
 After training, you will receive a classification report and accuracy/loss graphs. Adjust EPOCHS, INIT_LR, and other parameters in train_mask_detector.py as needed to improve accuracy.
 
-## References:
+## References
 OpenCV: https://opencv.org/
 TensorFlow and Keras: https://www.tensorflow.org/
 MobileNetV2 Architecture: Sandler, M., et al. "MobileNetV2: Inverted Residuals and Linear Bottlenecks."
