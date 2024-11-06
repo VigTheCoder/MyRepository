@@ -103,5 +103,5 @@ After training, you will receive a classification report and accuracy/loss graph
 
 ## References
 OpenCV: https://opencv.org/
-TensorFlow and Keras: https://www.tensorflow.org/"
+TensorFlow and Keras: https://www.tensorflow.org/
 
