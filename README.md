@@ -60,14 +60,14 @@ Project Directory Layout
 > Use short lowercase names at least for the top-level files and folders except
 > `LICENSE`, `README.md`
 
- ## Dataset:
+ ## Dataset
 The dataset should have two categories in separate folders:
 
 with_mask: Images of people wearing masks.
 without_mask: Images of people without masks.
 The dataset used for training should be placed in the dataset/ directory.
 
-## Training the Model:
+## Training the Model
 To train the face mask detection model, execute the command `python train_mask_detector.py`. 
 
 This script will
