@@ -27,7 +27,7 @@ The goal is to create a reliable face mask detector to help ensure public safety
 
 ## Setup and Requirements
 
-### Prerequisites
+Prerequisites
 To get started, you’ll need to have the following installed:
 - Python 3.7+
 - TensorFlow
@@ -37,21 +37,28 @@ To get started, you’ll need to have the following installed:
 
 To install all dependencies, run `pip install tensorflow keras opencv-python imutils numpy matplotlib` in your terminal.
 
+Project Directory Layout
 
-## Directory Structure:
+    .
+    ├── build                    # Compiled files (alternatively `dist`)
+    ├── dataset                  # Training dataset
+    │   ├── with_mask            # Images of people wearing masks
+    │   └── without_mask         # Images of people without masks
+    ├── docs                     # Documentation files
+    ├── face_detector            # Pre-trained face detection model files
+    │   ├── deploy.prototxt      # Model architecture file
+    │   └── res10_300x300_ssd_iter_140000.caffemodel  # Model weights file
+    ├── src                      # Source files for mask detection and training
+    │   ├── detect_mask_video.py # Script for real-time mask detection
+    │   └── train_mask_detector.py  # Script for training the mask detection model
+    ├── test                     # Automated tests for model accuracy and detection
+    ├── tools                    # Utilities and additional helper scripts
+    ├── mask_detector.model      # Saved trained model for mask detection
+    ├── LICENSE
+    └── README.md
 
-```mermaid
-graph TD;
-    A[Face-Mask-Detection-master] --> B[dataset];
-    B --> C[with_mask];
-    B --> D[without_mask];
-    A --> E[face_detector];
-    E --> F[deploy.prototxt];
-    E --> G[res10_300x300_ssd_iter_140000.caffemodel];
-    A --> H[detect_mask_video.py];
-    A --> I[train_mask_detector.py];
-    A --> J[mask_detector.model];
-
+> Use short lowercase names at least for the top-level files and folders except
+> `LICENSE`, `README.md`
 
  ## Dataset:
 The dataset should have two categories in separate folders:
@@ -60,10 +67,10 @@ with_mask: Images of people wearing masks.
 without_mask: Images of people without masks.
 The dataset used for training should be placed in the dataset/ directory.
 
-Training the Model:
+## Training the Model:
 To train the face mask detection model, execute the command `python train_mask_detector.py`. 
 
-## This script will:
+This script will:
 Load the dataset.
 Preprocess and augment the data.
 Train the MobileNetV2-based model.
@@ -91,7 +98,7 @@ Mask: Green bounding box.
 No Mask: Red bounding box.
 It also shows the confidence level of each prediction.
 
-## Model Performance:
+Model Performance:
 After training, you will receive a classification report and accuracy/loss graphs. Adjust EPOCHS, INIT_LR, and other parameters in train_mask_detector.py as needed to improve accuracy.
 
 ## References:
